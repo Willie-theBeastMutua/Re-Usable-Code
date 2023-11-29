@@ -1,0 +1,64 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login">Login</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <!-- class="max-width-container -->
+
+  <div id="header">
+    <h1>Create your<br />Account</h1>
+  </div>
+  <form id="form" #form="ngForm">
+
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="userData.fName" name="fName" placeholder="First Name" required="true"></ion-input>
+      <ion-text color="danger" *ngIf="form.controls['fName'].touched && form.controls['fName'].invalid">
+        *required
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="userData.lName" name="lName" placeholder="Last Name" required></ion-input>
+      <ion-text color="danger" *ngIf="form.controls['lName'].touched && form.controls['lName'].invalid">
+        *required
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="userData.email" name="email" type="email" placeholder="Email" required></ion-input>
+      <ion-text color="danger" *ngIf="form.controls['email'].touched && form.controls['email'].hasError('required')">
+        *required
+      </ion-text>
+      <ion-text color="danger" *ngIf="form.controls['email'].hasError('email')">
+        *invalid email format
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="key" slot="start"></ion-icon>
+      <ion-input [(ngModel)]="userData.password" type="password" name="password" placeholder="Password"
+        required></ion-input>
+      <ion-text color="danger" *ngIf="form.controls['password'].touched && form.controls['password'].invalid">
+        *required
+      </ion-text>
+    </ion-item>
+
+    <ion-button expand="block" shape="round" (click)="signUp()">Join Us</ion-button>
+  </form>
+
+  <p>Join us to unlock personalized health insights.<br />By pressing 'Join Us' you agree to <br /> our terms &
+    conditions.</p>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p>&copy; 2023 Doki. All rights reserved.</p>
+  </ion-toolbar>
+</ion-footer>
+<!-- </ion-content> -->

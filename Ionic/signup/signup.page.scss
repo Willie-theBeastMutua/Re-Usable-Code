@@ -1,0 +1,77 @@
+ion-toolbar {
+    --background: #03060b;
+    text-align: center;
+    
+ 
+ 
+ ion-button{
+     text-transform: initial;
+     font-size: 17px;
+ 
+    }   
+}
+ion-item {
+   // --highlight-color-focused: transparent;
+   border: 2px solid rgb(7, 118, 244);
+   border-radius: 20px;
+   --background:#ffffff; 
+   color: #010100;
+   font-weight: bold;   /* Remove the underline on focus */
+   margin-bottom: 10px;
+ }
+ 
+ ion-icon {
+   color: #3022ea; /* Set your desired icon color */
+   margin-right: 8px; /* Adjust the margin to create space between icon and text */
+ }
+ ion-text {
+
+font-weight:normal;   /* Remove the underline on focus */
+
+ }
+ 
+ /* Additional styling for the label if needed */
+
+ion-content{
+    --background: #f5f5f3;
+    height: 100vh;
+
+    
+       h1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 26px;
+        color: #010100;
+        margin-bottom: 15%;
+    
+    }
+ #form {
+    margin-top: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+ 
+  ion-button{
+    margin-top: 35px;
+    font-size: 18px;
+    height: 48px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+    --box-shadow: none;
+  }
+ }
+ p {
+    text-align: center;
+    color: #b6b6b6;
+    margin-top: 40px;
+ }
+}
+.danger-toast {
+   --background: #f53d3d; // Set the background color for danger
+   color: #fff; // Set the text color for danger
+ }
+ .error-message {
+   color: red;
+   font-size: 12px;
+ }
+ 
