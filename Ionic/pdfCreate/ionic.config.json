@@ -1,0 +1,7 @@
+{
+  "name": "pdfCreate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
